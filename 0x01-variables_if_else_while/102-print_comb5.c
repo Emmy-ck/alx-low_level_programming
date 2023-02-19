@@ -6,36 +6,28 @@
  */
 int main(void)
 {
-	int tho;
-	int hun;
-	int ten;
-	int bas;
+	int i;
+	int j;
+	int k;
 
-for (tho = 0; tho < 10; tho++)
-{
-
-	for (hun = 0; hun <= 10; hun++)
+	for (i = 0; i < 8; i++)
 	{
-
-		for (ten = 0; ten < 10; ten++)
+		for (j = i + 1; j < 9; j++)
 		{
-			for (bas = 0; bas < 10; bas++)
+			for (k = j + 1; k <= 9; k++)
 			{
-				putchar('0' + tho);
-				putchar('0' + hun);
-				putchar(32);
-				putchar('0' + ten);
-				putchar('0' + bas);
-				if (!(tho == 9 && hun == 8))
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
+
+				if (i != 7 || j != 8 || k != 9)
 				{
 					putchar(',');
-					putchar(32);
+					putchar(' ');
 				}
-				bas++;
 			}
 		}
 	}
-}
 	putchar('\n');
 	return (0);
 }
