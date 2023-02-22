@@ -18,7 +18,7 @@ int main(void)
 	else
 	{
 	k += j;
-	printf(", %ld", k)
+	printf(", %ld", k);
 	}
 	++i;
 	}
