@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_times_table - prints times table of the input
  * starting with 0,
@@ -34,6 +35,7 @@ void print_times_table(int n)
 	}
 	_putchar((prod % 10) + '0');
 	}
+	_putchar('\n');
 	}
 	}
 }
