@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-char *_strchr(char *s, char c)
+char *_strncpy(char *dest, char *src, int n)
 {
-    return strchr(s, c);
+    return strncpy(dest, src, n);
 }
