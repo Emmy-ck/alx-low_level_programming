@@ -25,7 +25,6 @@ char *argstostr(int ac, char **av)
 
 	if (str == NULL)
 		return (NULL);
-
 	k = 0;
 
 	for (i = 0; i < ac; i++)
@@ -38,6 +37,5 @@ char *argstostr(int ac, char **av)
 		str[k] = '\n';
 		k++;
 	}
-
 	return (str);
 }
