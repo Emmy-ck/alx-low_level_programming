@@ -8,27 +8,21 @@
 void print_binary(unsigned long int n)
 {
 	int i, count = 0;
+
 	unsigned long int current;
-	char buffer[64];
 
-	for (i = 0; i < 64; i++)
+	for (i = 63; i >= 0; i--)
 	{
-		current = n >> (63 - i);
-		buffer[i] = (current & 1) ? '1' : '0';
+		unsigned long int current = n >> i;
 
-		if (buffer[i] == '1')
-			count++;
-	}
-	if (count == 0)
-		_putchar('0');
-	else
-	{
-		for (i = 0; i < 64; i++)
+		if (current & 1)
 		{
-			if (buffer[i] == '1')
-				break;
+			_putchar('1');
+			count++;
 		}
-		for (; i < 64; i++)
-			_putchar(buffer[i]);
+		else if (count)
+			_putchar('0');
 	}
+	if (!count)
+		_putchar('0');
 }
